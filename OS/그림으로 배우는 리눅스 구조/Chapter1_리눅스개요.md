@@ -17,7 +17,7 @@
 ### 커널
 
 
-![alt text](../images/1_kernel.webp)
+![image-15](https://github.com/user-attachments/assets/5b915041-64b5-4a37-835b-35cf8e0888b7)   
 현재 그림에서는 프로세스가 한 개이지만, 여러 프로세스가 동시에 장치를 제어하려고 하면 문제가 발생한다. (`경쟁 상태 : Race Condition`)
 
 예를 들어, 중간 다른 프로세스가 끼어드는 상황이 발생하면 데이터의 무결성이 손상된다.
@@ -41,7 +41,7 @@
     - 파일 시스템 조작
     - 장치 조작
   
-![syscall](../images/2_syscall.png)
+![1_syscall](https://github.com/user-attachments/assets/1f548b4f-e434-4c5c-b3c9-77486e3bcc20)
 
 시스템 콜은 CPU의 특수한 명령을 실행해서 처리된다. 프로세스는 사용자 모드(User mode)로 실행되지만 커널에 처리를 요청하기 위해 시스템 콜을 호출하면 CPU에서는 예외(exception) 이벤트가 발생한다. 
 
