@@ -1,2 +1,4 @@
-# TIL
-Today I Learned, 하루동안 공부한 내용을 정리해서 기록합니다.
+# TIL(Today I Learned)
+
+## 운영체제
+- 그림으로 배우는 리눅스 구조
