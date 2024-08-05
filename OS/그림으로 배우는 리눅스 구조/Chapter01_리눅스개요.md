@@ -220,14 +220,16 @@ int main(void) {
 
 **pause.c 실행 후 확인(정적 라이브러리 사용) → libc.a 사용**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0c79766f-e6e5-47fb-bb1f-6711656123dd/be51aa33-683b-434d-bc98-16d5a7d2db4b/Untitled.png)
+<img width="529" alt="스크린샷 2024-08-05 오후 7 59 57" src="https://github.com/user-attachments/assets/cb7dfde7-40d2-476e-9ae7-b3ca374612e3">
+
 
 - 파일 크기 : 약 650KiB
 - 공유 라이브러리 링크 x
 
 **pause.c 실행 후 확인(동적 라이브러리 사용) → libc.so 사용**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0c79766f-e6e5-47fb-bb1f-6711656123dd/4d6a14b3-8f46-4145-8cc5-9dea5d1d925f/Untitled.png)
+<img width="673" alt="스크린샷 2024-08-05 오후 8 01 41" src="https://github.com/user-attachments/assets/ec83386f-dfb5-456d-8709-1769b598413d">
+
 
 - 파일 크기 : 약 16KiB
 - 공유 라이브러리 링크 o
@@ -250,7 +252,8 @@ int main(void) {
 ldd hello
 ```
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0c79766f-e6e5-47fb-bb1f-6711656123dd/770344fa-cd57-448d-9512-19571138e9e0/Untitled.png)
+<img width="382" alt="스크린샷 2024-08-05 오후 8 08 46" src="https://github.com/user-attachments/assets/0b2f7a20-6d27-4176-9703-ff2da3b6ea8e">
+
 
 `ldd` 로 확인해본결과 Go는 동적 링크를 사용하고 있지 않음을 알 수 있다. 
 
