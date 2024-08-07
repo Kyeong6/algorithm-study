@@ -66,7 +66,8 @@ sys.exit(1)
 
 해당 스크립트를 생성하고 python3 ./fork.py를  수행하면 다음과 같은 결과를 얻는다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0c79766f-e6e5-47fb-bb1f-6711656123dd/bdfd677f-0a1e-4e38-83e0-b59fdf1f87ea/Untitled.png)
+<img width="497" alt="스크린샷 2024-08-06 오후 5 47 39" src="https://github.com/user-attachments/assets/7f45d736-58bc-4b2f-a669-d44e27bbf7e0">
+
 
 정리하자면 fork() 함수에서 복귀한 후 반환값에 조건이 달라진다.
 
@@ -76,41 +77,3 @@ sys.exit(1)
 <br/></br>
 **execve() 함수 : 다른 프로그램을 기동**
 
-fork() 함수로 프로세스 복사본을 만들었으면 자식 프로세스에서 execve() 함수를 호출하여 새로운 프로그램으로 바꾼다.
-
-- 실행 순서
-    - execve() 함수 호출
-    - execve() 함수 인수로 지정한 실행 파일에서 프로그램을 읽어서 메모리에 배치하는데 필요한 정보 가져옴
-    - 현재 프로세스의 메모리를 새로운 프로세스 데이터로 덮어씀
-    - 프로세스를 새로운 프로세스의 최초에 실행할 명령(entry point)부터 실행 시작
-
-(현재 프로세스 메모리 → execve() 실행 → 실행 파일의 새로운 프로세스 메모리 → 시작)
-
-*fork() 함수를 호출한 후에 자식 프로세스는 execve() 함수에 의해서 인수로 지정한 프로세스로 변경된다는 의미! 이 구조를 fork-exec 구조라 한다.*
-
-**execve() 실습 진행**
-
-```python
-# fork-and-exec.py
-
-import os, sys
-
-ret = os.fork()
-
-if ret == 0:
-	print("Child process pid={}, Parent process pid={}".format(os.getpid(), os.getppid())
-	os.execve("/bin/echo", ["echo", "pid={} hi"].format(os.getpid())], {})
-	exit()
-	
-elif ret > 0:
-	print("Parent process pid={}, Child process pid={}".format(os.getpid(), ret))
-	exit()
-	
-sys.exit(1)
-```
-
-해당 스크립트를 생성하고 python3 ./fork-and-exec.py를  수행하면 다음과 같은 결과를 얻는다.
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0c79766f-e6e5-47fb-bb1f-6711656123dd/3e555612-208c-49e0-bc2d-87dfde905396/Untitled.png)
-
-execve() 명령어로 인해서 hi가 나온 것을 알 수 있다. 결국 자식 프로세스 메모리에 echo 메모리가 바뀐 것이다.
