@@ -66,7 +66,8 @@ sys.exit(1)
 
 해당 스크립트를 생성하고 python3 ./fork.py를  수행하면 다음과 같은 결과를 얻는다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0c79766f-e6e5-47fb-bb1f-6711656123dd/bdfd677f-0a1e-4e38-83e0-b59fdf1f87ea/Untitled.png)
+<img width="497" alt="스크린샷 2024-08-06 오후 5 47 39" src="https://github.com/user-attachments/assets/7f45d736-58bc-4b2f-a669-d44e27bbf7e0">
+
 
 정리하자면 fork() 함수에서 복귀한 후 반환값에 조건이 달라진다.
 
