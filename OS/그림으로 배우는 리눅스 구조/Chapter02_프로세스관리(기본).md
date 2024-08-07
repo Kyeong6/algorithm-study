@@ -112,6 +112,7 @@ sys.exit(1)
 
 해당 스크립트를 생성하고 python3 ./fork-and-exec.py를  수행하면 다음과 같은 결과를 얻는다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0c79766f-e6e5-47fb-bb1f-6711656123dd/3e555612-208c-49e0-bc2d-87dfde905396/Untitled.png)
+<img width="551" alt="스크린샷 2024-08-07 오후 5 35 31" src="https://github.com/user-attachments/assets/581f079e-7cdc-4567-a9e0-390b7e28bd68">
+
 
 execve() 명령어로 인해서 hi가 나온 것을 알 수 있다. 결국 자식 프로세스 메모리에 echo 메모리가 바뀐 것이다.
