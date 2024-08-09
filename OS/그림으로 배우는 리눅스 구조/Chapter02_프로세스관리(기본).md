@@ -158,7 +158,8 @@ execve() 함수가 동작하려면 실행 파일은 프로그램 코드와 데�
 
 펌웨어 → Boot Loader → OS 커널 → init 프로세스 → 자식 프로세스 …
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0c79766f-e6e5-47fb-bb1f-6711656123dd/bb1c852d-bbca-4791-9240-40c59c64e5f8/Untitled.png)
+<img width="543" alt="1" src="https://github.com/user-attachments/assets/61bde2f7-0c85-4779-a656-dd1e1a00d1c3">
+
 
 systemd(1)이 init 프로세스를 의미한다.
 
@@ -166,7 +167,8 @@ systemd(1)이 init 프로세스를 의미한다.
 
 pstree -p 명령어로 확인해봤듯이 시스템에는 수많은 프로세스가 존재한다. 그러면 프로세스들은 계속해서 CPU를 사용할까? 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0c79766f-e6e5-47fb-bb1f-6711656123dd/d171b0d6-54cf-4c31-94b0-9d684a3e4382/Untitled.png)
+<img width="890" alt="2" src="https://github.com/user-attachments/assets/434fa75c-2e9b-40a9-9862-1c7e838ce319">
+
 
 각 프로세스는 실행된 후 이벤트가 발생할 때까지 CPU를 사용하지 않고 sleep 상태로 기다리고 있다. 
 
