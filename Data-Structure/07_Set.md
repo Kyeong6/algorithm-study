@@ -60,6 +60,38 @@ intersection = set_a & set_b # {4,5}
 difference = set_a - set_b # {1,2,3}
 ```
 
+## 프로그래밍
+
+### 세트를 리스트로 변환
+
+```python
+num_set = {1,2,3}
+nums = list(num_set)
+nums # [1,2,3]
+```
+
+### 리스트에서 중복 값 제거
+
+- 세트는 중복 값을 허용하지 않기 때문에, 리스트에서 중복된 값을 제거하는 데에 매우 유용하게 사용
+
+```python
+numbers = [1,2,2,3,4,4,5]
+unique_nubmers = list(set(numbers))
+unique_numbers # [1,2,3,4,5]
+```
+
+### 문자열에서 중복 문자 제거
+
+- 세트를 이용해서 문자열에서 중복 문자 제거 가능
+    - **여기서 출력 결과가 ‘ACB’ 인데 집합의 특성인 순서가 없기 때문에 출력 결과는 예측할 수 없음!**
+    - **그럼 순서를 정하려면 리스트로 변환시키면 되겠네?**
+
+```python
+chars = 'AAABC'
+unique_chars = "".join(set(chars))
+unique_chars # 'ACB'
+```
+
 ## 정리
 
 - 집합은 고유한 값을 저장하기 위한 자료구조
