@@ -4,9 +4,10 @@
 - [그림으로 배우는 리눅스 구조](https://github.com/Kyeong6/TIL/tree/main/OS/%EA%B7%B8%EB%A6%BC%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%EC%9A%B0%EB%8A%94%20%EB%A6%AC%EB%88%85%EC%8A%A4%20%EA%B5%AC%EC%A1%B0)
 
 ## 자료구조
-- [자료구조 개념 학습](https://github.com/Kyeong6/TIL/tree/main/Data-Structure)
+- [개념 정리](https://github.com/Kyeong6/TIL/tree/main/Data-Structure)
 
 ## 알고리즘
+- [개념 정리](https://github.com/Kyeong6/TIL/tree/main/Algorithm/Concept)
 - [완전 탐색](https://github.com/Kyeong6/TIL/tree/main/Algorithm/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89)
 
 ## 데이터 엔지니어링
