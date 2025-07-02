@@ -14,6 +14,7 @@
 
 분석:
 - 문제에서 특정 값이나 패턴이 주어지면 해당 값을 "하드 코딩"하면 좋음
+- 패턴 길이가 정답 길이보다 더 길 수 있으니 "몫 연산자"를 이용
 """
 def solution(answers):
 
@@ -27,7 +28,7 @@ def solution(answers):
     # 점수 저장
     scores = [0] * 3
 
-    # 패턴과 정답 비교
+    # 패턴과 정답 비교: O(N)
     for i, answer in enumerate(answers):
         for j, patterns in enumerate(patterns):
             if answer == patterns[i % len(patterns)]:
@@ -36,7 +37,7 @@ def solution(answers):
     # 최고 점수
     max_score = max(scores)
 
-    # 가장 높은 점수를 가진 수포자들의 번호 찾아서 리스트에 담음
+    # 가장 높은 점수를 가진 수포자들의 번호 찾아서 리스트에 담음: O(1) -> index
     highest_scores =[]
     for i, score in enumerate(scores):
         if score == max_score:
